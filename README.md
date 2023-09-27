@@ -34,7 +34,7 @@ Our method creates both non-photorealistic cartoon animations (top) and natural 
 - [x] Generate new puppet! (tested on Ubuntu)
 - [x] Pre-trained models
 - [x] Google colab quick demo for natural faces [[detail]](quick_demo.ipynb) [[TDLR]](quick_demo_tdlr.ipynb)
-- [x] Google colab quick demo for cartoon faces [[link]]()
+- [x] Google colab quick demo for cartoon faces [[link]](Cartoon_quick_demo_face_warp.ipynb)
 - [ ] Training code for each module
 
 ## Requirements
