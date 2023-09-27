@@ -34,6 +34,7 @@ Our method creates both non-photorealistic cartoon animations (top) and natural 
 - [x] Generate new puppet! (tested on Ubuntu)
 - [x] Pre-trained models
 - [x] Google colab quick demo for natural faces [[detail]](quick_demo.ipynb) [[TDLR]](quick_demo_tdlr.ipynb)
+- [x] Google colab quick demo for cartoon faces [[link]]()
 - [ ] Training code for each module
 
 ## Requirements
@@ -117,12 +118,19 @@ to amply lip motion (in x/y-axis direction) and head motion displacements, defau
 
 - put the cartoon image under `examples_cartoon`
 
-- install conda environment `foa_env_py2` (tested on python 2) for Face-of-art (https://github.com/papulke/face-of-art).
+- install conda environment `foa` (tested on python 2) for Face-of-art (https://github.com/papulke/face-of-art).
  Download the pre-trained weight [here](https://www.dropbox.com/sh/hrxcyug1bmbj6cs/AAAxq_zI5eawcLjM8zvUwaXha?dl=0) and put it under `examples/ckpt`. 
  Activate the environment.
-
 ```
-source activate foa_env_py2
+conda create --name foa python=2.7 tensorflow=1.15
+conda activate foa
+conda install -c conda-forge opencv=4.1.0
+sudo apt-get install libopencv-*
+pip install menpo==0.8.1
+pip install menpofit==0.5.0
+```
+```
+source activate foa
 ```
 
 - create necessary files to animate your cartoon image, i.e. 
