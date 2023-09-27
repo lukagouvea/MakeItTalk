@@ -87,6 +87,27 @@ else:
         pts += [float(item) for item in line]
     pts0 = np.array(pts).reshape((68, 2))
 
+
+IMAGE_WIDTH = 1189
+IMAGE_HEIGHT = 1600
+for i in range(len(pts0)):
+    x, y = pts0[i]
+
+    # Verifique as coordenadas X e ajuste, se necessario
+    if x < 0:
+        x = 0
+    elif x >= IMAGE_WIDTH:
+        x = IMAGE_WIDTH - 1
+
+    # Verifique as coordenadas Y e ajuste, se necessario
+    if y < 0:
+        y = 0
+    elif y >= IMAGE_HEIGHT:
+        y = IMAGE_HEIGHT - 1
+
+    pts0[i] = [x, y]    
+
+
 pts = np.copy(pts0)
 img0 = cv2.imread(os.path.join(data_dir, test_data))
 img = np.copy(img0)
